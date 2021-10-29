@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		6334B386272ACA9E00AD3570 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6334B384272ACA9E00AD3570 /* Main.storyboard */; };
 		6334B388272ACA9F00AD3570 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6334B387272ACA9F00AD3570 /* Assets.xcassets */; };
 		6334B38B272ACA9F00AD3570 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6334B389272ACA9F00AD3570 /* LaunchScreen.storyboard */; };
+		A6EF33A7D8DFC1E9228C8275 /* Pods_TabBarAnimationProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73C6F38ECB76E02912F80891 /* Pods_TabBarAnimationProject.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,10 @@
 		6334B387272ACA9F00AD3570 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6334B38A272ACA9F00AD3570 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6334B38C272ACA9F00AD3570 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		73C6F38ECB76E02912F80891 /* Pods_TabBarAnimationProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TabBarAnimationProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		84716978272BD28600EDB9D8 /* 1298-2487-animated-icon-set-1-color.riv */ = {isa = PBXFileReference; lastKnownFileType = file; name = "1298-2487-animated-icon-set-1-color.riv"; path = "../../../../../../../Downloads/1298-2487-animated-icon-set-1-color.riv"; sourceTree = "<group>"; };
+		85AF4CD9825B4D2094D9142E /* Pods-TabBarAnimationProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabBarAnimationProject.release.xcconfig"; path = "Target Support Files/Pods-TabBarAnimationProject/Pods-TabBarAnimationProject.release.xcconfig"; sourceTree = "<group>"; };
+		D2B04A7CBD833DDED8B0B034 /* Pods-TabBarAnimationProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabBarAnimationProject.debug.xcconfig"; path = "Target Support Files/Pods-TabBarAnimationProject/Pods-TabBarAnimationProject.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6EF33A7D8DFC1E9228C8275 /* Pods_TabBarAnimationProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +48,8 @@
 			children = (
 				6334B37D272ACA9E00AD3570 /* TabBarAnimationProject */,
 				6334B37C272ACA9E00AD3570 /* Products */,
+				E96B0A04505A795AB6A0BA03 /* Pods */,
+				6C5BBA9E149AC219A01FB635 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +64,7 @@
 		6334B37D272ACA9E00AD3570 /* TabBarAnimationProject */ = {
 			isa = PBXGroup;
 			children = (
+				84716977272BD22000EDB9D8 /* Assets */,
 				6334B37E272ACA9E00AD3570 /* AppDelegate.swift */,
 				6334B380272ACA9E00AD3570 /* SceneDelegate.swift */,
 				6334B382272ACA9E00AD3570 /* ViewController.swift */,
@@ -67,6 +76,31 @@
 			path = TabBarAnimationProject;
 			sourceTree = "<group>";
 		};
+		6C5BBA9E149AC219A01FB635 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				73C6F38ECB76E02912F80891 /* Pods_TabBarAnimationProject.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		84716977272BD22000EDB9D8 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				84716978272BD28600EDB9D8 /* 1298-2487-animated-icon-set-1-color.riv */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		E96B0A04505A795AB6A0BA03 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D2B04A7CBD833DDED8B0B034 /* Pods-TabBarAnimationProject.debug.xcconfig */,
+				85AF4CD9825B4D2094D9142E /* Pods-TabBarAnimationProject.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +108,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6334B38F272ACA9F00AD3570 /* Build configuration list for PBXNativeTarget "TabBarAnimationProject" */;
 			buildPhases = (
+				316B65839AC847BEC69CDABF /* [CP] Check Pods Manifest.lock */,
 				6334B377272ACA9E00AD3570 /* Sources */,
 				6334B378272ACA9E00AD3570 /* Frameworks */,
 				6334B379272ACA9E00AD3570 /* Resources */,
+				74592028D8B3F7F3372B66DF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +167,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		316B65839AC847BEC69CDABF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TabBarAnimationProject-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		74592028D8B3F7F3372B66DF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TabBarAnimationProject/Pods-TabBarAnimationProject-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TabBarAnimationProject/Pods-TabBarAnimationProject-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TabBarAnimationProject/Pods-TabBarAnimationProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6334B377272ACA9E00AD3570 /* Sources */ = {
@@ -283,6 +361,7 @@
 		};
 		6334B390272ACA9F00AD3570 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2B04A7CBD833DDED8B0B034 /* Pods-TabBarAnimationProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -301,6 +380,7 @@
 		};
 		6334B391272ACA9F00AD3570 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85AF4CD9825B4D2094D9142E /* Pods-TabBarAnimationProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
