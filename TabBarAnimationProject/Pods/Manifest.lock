@@ -1,16 +1,20 @@
 PODS:
+  - RAMAnimatedTabBarController (5.2.0)
   - RiveRuntime (0.15.9)
 
 DEPENDENCIES:
+  - RAMAnimatedTabBarController
   - RiveRuntime
 
 SPEC REPOS:
   trunk:
+    - RAMAnimatedTabBarController
     - RiveRuntime
 
 SPEC CHECKSUMS:
+  RAMAnimatedTabBarController: 6863a386e7ae2ab227cd60aa73ab8ff56cdacfdd
   RiveRuntime: d28fa98167bb9a097b228570aaffc62559cacc71
 
-PODFILE CHECKSUM: c4348f39af0d59725ea1b64642e6e3186e6f3050
+PODFILE CHECKSUM: 40f364679ab06b864a30d78894094deec644f10c
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.10.2

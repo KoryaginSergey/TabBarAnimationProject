@@ -26,7 +26,6 @@
 		6334B38A272ACA9F00AD3570 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6334B38C272ACA9F00AD3570 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		73C6F38ECB76E02912F80891 /* Pods_TabBarAnimationProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TabBarAnimationProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		84716978272BD28600EDB9D8 /* 1298-2487-animated-icon-set-1-color.riv */ = {isa = PBXFileReference; lastKnownFileType = file; name = "1298-2487-animated-icon-set-1-color.riv"; path = "../../../../../../../Downloads/1298-2487-animated-icon-set-1-color.riv"; sourceTree = "<group>"; };
 		85AF4CD9825B4D2094D9142E /* Pods-TabBarAnimationProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabBarAnimationProject.release.xcconfig"; path = "Target Support Files/Pods-TabBarAnimationProject/Pods-TabBarAnimationProject.release.xcconfig"; sourceTree = "<group>"; };
 		D2B04A7CBD833DDED8B0B034 /* Pods-TabBarAnimationProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabBarAnimationProject.debug.xcconfig"; path = "Target Support Files/Pods-TabBarAnimationProject/Pods-TabBarAnimationProject.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -64,7 +63,6 @@
 		6334B37D272ACA9E00AD3570 /* TabBarAnimationProject */ = {
 			isa = PBXGroup;
 			children = (
-				84716977272BD22000EDB9D8 /* Assets */,
 				6334B37E272ACA9E00AD3570 /* AppDelegate.swift */,
 				6334B380272ACA9E00AD3570 /* SceneDelegate.swift */,
 				6334B382272ACA9E00AD3570 /* ViewController.swift */,
@@ -82,14 +80,6 @@
 				73C6F38ECB76E02912F80891 /* Pods_TabBarAnimationProject.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		84716977272BD22000EDB9D8 /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-				84716978272BD28600EDB9D8 /* 1298-2487-animated-icon-set-1-color.riv */,
-			);
-			path = Assets;
 			sourceTree = "<group>";
 		};
 		E96B0A04505A795AB6A0BA03 /* Pods */ = {

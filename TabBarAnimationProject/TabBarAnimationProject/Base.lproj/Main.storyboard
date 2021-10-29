@@ -8,22 +8,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TabBarAnimationProject" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="VBa-NB-YoM"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="161" y="256"/>
-        </scene>
         <!--Item 2-->
         <scene sceneID="ate-yl-knb">
             <objects>
@@ -38,7 +22,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HsS-G8-ccX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-606" y="614"/>
+            <point key="canvasLocation" x="-743" y="663"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="8me-B1-TJi">
@@ -54,7 +38,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="STE-pQ-tMZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-491" y="-54"/>
+            <point key="canvasLocation" x="-743" y="-249"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="SpT-xW-2sg">
@@ -68,12 +52,11 @@
                     <connections>
                         <segue destination="agl-r5-XuO" kind="relationship" relationship="viewControllers" id="7m8-jn-ONB"/>
                         <segue destination="kPb-y1-yxl" kind="relationship" relationship="viewControllers" id="VEN-yT-AiM"/>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="oNp-Xd-1E3"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a2n-Js-NXl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1388" y="256"/>
+            <point key="canvasLocation" x="-1603" y="248"/>
         </scene>
     </scenes>
     <resources>

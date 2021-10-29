@@ -7,6 +7,7 @@
 
 import UIKit
 import RiveRuntime
+import RAMAnimatedTabBarController
 
 class ViewController: UIViewController {
 
