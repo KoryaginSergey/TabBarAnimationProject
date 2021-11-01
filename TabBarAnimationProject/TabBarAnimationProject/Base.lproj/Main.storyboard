@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--MAIL-->
+        <!--Mail View Controller-->
         <scene sceneID="ate-yl-knb">
             <objects>
                 <viewController restorationIdentifier="MailViewController" storyboardIdentifier="MailViewController" id="kPb-y1-yxl" customClass="MailViewController" customModule="TabBarAnimationProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -16,15 +16,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="2rg-FS-NEl"/>
-                        <color key="backgroundColor" red="1" green="0.96590451980000003" blue="0.87083012630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.1854929066340528" green="0.19701120847786782" blue="0.23121761658031093" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="MAIL" image="mailBlack" id="6xl-5S-d2J"/>
+                    <tabBarItem key="tabBarItem" title="" image="mailBlack" id="6xl-5S-d2J"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HsS-G8-ccX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-743" y="663"/>
         </scene>
-        <!--PHOTO-->
+        <!--Photo View Controller-->
         <scene sceneID="8me-B1-TJi">
             <objects>
                 <viewController restorationIdentifier="PhotoViewController" storyboardIdentifier="PhotoViewController" id="agl-r5-XuO" customClass="PhotoViewController" customModule="TabBarAnimationProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -34,7 +34,9 @@
                         <viewLayoutGuide key="safeArea" id="k7A-CJ-dcs"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="PHOTO" image="imageBlack" id="w44-T2-CVh"/>
+                    <tabBarItem key="tabBarItem" title="" image="imageBlack" id="w44-T2-CVh">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="-50" vertical="0.0"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="STE-pQ-tMZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -44,10 +46,15 @@
         <scene sceneID="SpT-xW-2sg">
             <objects>
                 <tabBarController id="W40-UZ-LoS" customClass="TabBarController" customModule="TabBarAnimationProject" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="M7F-Kw-jAw">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="M7F-Kw-jAw" customClass="AppTabBar" customModule="TabBarAnimationProject" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="size" keyPath="titlePositionAdjustment">
+                                <size key="value" width="-20" height="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="agl-r5-XuO" kind="relationship" relationship="viewControllers" id="7m8-jn-ONB"/>
@@ -59,6 +66,11 @@
             <point key="canvasLocation" x="-1739" y="213"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="M7F-Kw-jAw">
+            <size key="intrinsicContentSize" width="-1" height="83"/>
+        </designable>
+    </designables>
     <resources>
         <image name="imageBlack" width="25" height="25"/>
         <image name="mailBlack" width="25" height="25"/>

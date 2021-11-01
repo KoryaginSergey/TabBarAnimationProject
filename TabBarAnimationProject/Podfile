@@ -6,6 +6,7 @@ target 'TabBarAnimationProject' do
   use_frameworks!
 pod 'RiveRuntime'
 pod 'RAMAnimatedTabBarController'
+pod "Comets"
   # Pods for TabBarAnimationProject
 
 end

@@ -1,3 +1,4 @@
 ${PODS_ROOT}/Target Support Files/Pods-TabBarAnimationProject/Pods-TabBarAnimationProject-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Comets/Comets.framework
 ${BUILT_PRODUCTS_DIR}/RAMAnimatedTabBarController/RAMAnimatedTabBarController.framework
 ${PODS_XCFRAMEWORKS_BUILD_DIR}/RiveRuntime/RiveRuntime.framework/RiveRuntime

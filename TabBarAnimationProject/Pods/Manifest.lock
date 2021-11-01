@@ -1,20 +1,24 @@
 PODS:
+  - Comets (0.3.1)
   - RAMAnimatedTabBarController (5.2.0)
   - RiveRuntime (0.15.9)
 
 DEPENDENCIES:
+  - Comets
   - RAMAnimatedTabBarController
   - RiveRuntime
 
 SPEC REPOS:
   trunk:
+    - Comets
     - RAMAnimatedTabBarController
     - RiveRuntime
 
 SPEC CHECKSUMS:
+  Comets: ff75eb4658d612af66073bf9fcf6e8bef274817b
   RAMAnimatedTabBarController: 6863a386e7ae2ab227cd60aa73ab8ff56cdacfdd
   RiveRuntime: d28fa98167bb9a097b228570aaffc62559cacc71
 
-PODFILE CHECKSUM: 40f364679ab06b864a30d78894094deec644f10c
+PODFILE CHECKSUM: d7b89db0d24d5b23289d9759a3c5d2a8f543a267
 
-COCOAPODS: 1.10.2
+COCOAPODS: 1.10.1
