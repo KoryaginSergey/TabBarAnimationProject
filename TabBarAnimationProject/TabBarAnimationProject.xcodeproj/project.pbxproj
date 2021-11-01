@@ -17,6 +17,10 @@
 		84716981272EF4A800EDB9D8 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84716980272EF4A700EDB9D8 /* PhotoViewController.swift */; };
 		84716984272EF4C900EDB9D8 /* MailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84716983272EF4C900EDB9D8 /* MailViewController.swift */; };
 		8471698C272FDFC800EDB9D8 /* AppTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8471698B272FDFC700EDB9D8 /* AppTabBar.swift */; };
+		8471699327300E9900EDB9D8 /* RAMBounceAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8471699227300E9800EDB9D8 /* RAMBounceAnimation.swift */; };
+		84716996273012FA00EDB9D8 /* RAMRotationAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84716995273012FA00EDB9D8 /* RAMRotationAnimation.swift */; };
+		8471699A2730267E00EDB9D8 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847169982730267E00EDB9D8 /* ScanViewController.swift */; };
+		8471699B2730267E00EDB9D8 /* ScanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 847169992730267E00EDB9D8 /* ScanViewController.xib */; };
 		A6EF33A7D8DFC1E9228C8275 /* Pods_TabBarAnimationProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73C6F38ECB76E02912F80891 /* Pods_TabBarAnimationProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +38,10 @@
 		84716980272EF4A700EDB9D8 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		84716983272EF4C900EDB9D8 /* MailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailViewController.swift; sourceTree = "<group>"; };
 		8471698B272FDFC700EDB9D8 /* AppTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabBar.swift; sourceTree = "<group>"; };
+		8471699227300E9800EDB9D8 /* RAMBounceAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RAMBounceAnimation.swift; sourceTree = "<group>"; };
+		84716995273012FA00EDB9D8 /* RAMRotationAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RAMRotationAnimation.swift; sourceTree = "<group>"; };
+		847169982730267E00EDB9D8 /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
+		847169992730267E00EDB9D8 /* ScanViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScanViewController.xib; sourceTree = "<group>"; };
 		85AF4CD9825B4D2094D9142E /* Pods-TabBarAnimationProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabBarAnimationProject.release.xcconfig"; path = "Target Support Files/Pods-TabBarAnimationProject/Pods-TabBarAnimationProject.release.xcconfig"; sourceTree = "<group>"; };
 		D2B04A7CBD833DDED8B0B034 /* Pods-TabBarAnimationProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabBarAnimationProject.debug.xcconfig"; path = "Target Support Files/Pods-TabBarAnimationProject/Pods-TabBarAnimationProject.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,6 +90,10 @@
 				84716980272EF4A700EDB9D8 /* PhotoViewController.swift */,
 				84716983272EF4C900EDB9D8 /* MailViewController.swift */,
 				8471698B272FDFC700EDB9D8 /* AppTabBar.swift */,
+				8471699227300E9800EDB9D8 /* RAMBounceAnimation.swift */,
+				84716995273012FA00EDB9D8 /* RAMRotationAnimation.swift */,
+				847169982730267E00EDB9D8 /* ScanViewController.swift */,
+				847169992730267E00EDB9D8 /* ScanViewController.xib */,
 			);
 			path = TabBarAnimationProject;
 			sourceTree = "<group>";
@@ -165,6 +177,7 @@
 				6334B38B272ACA9F00AD3570 /* LaunchScreen.storyboard in Resources */,
 				6334B388272ACA9F00AD3570 /* Assets.xcassets in Resources */,
 				6334B386272ACA9E00AD3570 /* Main.storyboard in Resources */,
+				8471699B2730267E00EDB9D8 /* ScanViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,6 +237,9 @@
 				6334B381272ACA9E00AD3570 /* SceneDelegate.swift in Sources */,
 				84716981272EF4A800EDB9D8 /* PhotoViewController.swift in Sources */,
 				84716984272EF4C900EDB9D8 /* MailViewController.swift in Sources */,
+				8471699A2730267E00EDB9D8 /* ScanViewController.swift in Sources */,
+				8471699327300E9900EDB9D8 /* RAMBounceAnimation.swift in Sources */,
+				84716996273012FA00EDB9D8 /* RAMRotationAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

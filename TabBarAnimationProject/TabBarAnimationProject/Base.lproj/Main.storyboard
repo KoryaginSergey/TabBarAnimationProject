@@ -18,7 +18,13 @@
                         <viewLayoutGuide key="safeArea" id="2rg-FS-NEl"/>
                         <color key="backgroundColor" red="0.1854929066340528" green="0.19701120847786782" blue="0.23121761658031093" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="mailBlack" id="6xl-5S-d2J"/>
+                    <tabBarItem key="tabBarItem" title="" image="mailBlack" id="6xl-5S-d2J">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="size" keyPath="titlePositionAdjustment">
+                                <size key="value" width="20" height="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HsS-G8-ccX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -35,7 +41,11 @@
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="imageBlack" id="w44-T2-CVh">
-                        <offsetWrapper key="titlePositionAdjustment" horizontal="-50" vertical="0.0"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="size" keyPath="titlePositionAdjustment">
+                                <size key="value" width="-20" height="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="STE-pQ-tMZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -46,15 +56,10 @@
         <scene sceneID="SpT-xW-2sg">
             <objects>
                 <tabBarController id="W40-UZ-LoS" customClass="TabBarController" customModule="TabBarAnimationProject" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="M7F-Kw-jAw" customClass="AppTabBar" customModule="TabBarAnimationProject" customModuleProvider="target">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="M7F-Kw-jAw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="size" keyPath="titlePositionAdjustment">
-                                <size key="value" width="-20" height="0.0"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="agl-r5-XuO" kind="relationship" relationship="viewControllers" id="7m8-jn-ONB"/>
@@ -66,11 +71,6 @@
             <point key="canvasLocation" x="-1739" y="213"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="M7F-Kw-jAw">
-            <size key="intrinsicContentSize" width="-1" height="83"/>
-        </designable>
-    </designables>
     <resources>
         <image name="imageBlack" width="25" height="25"/>
         <image name="mailBlack" width="25" height="25"/>

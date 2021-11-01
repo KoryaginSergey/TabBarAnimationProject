@@ -8,11 +8,11 @@
 import UIKit
 import Comets
 
+
 class MailViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
     
     // Customize your comet
     let width = view.bounds.width
@@ -56,9 +56,8 @@ class MailViewController: UIViewController {
     
     // draw line track and animate
     for comet in comets {
-//      view.layer.addSublayer(comet.drawLine())
+      //      view.layer.addSublayer(comet.drawLine())
       view.layer.addSublayer(comet.animate())
     }
   }
-  
 }

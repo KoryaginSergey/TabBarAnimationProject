@@ -6,11 +6,10 @@
 //
 
 import UIKit
+import RAMAnimatedTabBarController
+
 
 class TabBarController: UITabBarController {
-  
-  
-  
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -18,19 +17,15 @@ class TabBarController: UITabBarController {
     if let items = self.tabBar.items {
       for (index, item) in items.enumerated() {
         item.image = self.getImage(by: index)
+//        item.value(forKeyPath: "titlePositionAdjustment")
         let appearance = UITabBarAppearance()
-        appearance.stackedLayoutAppearance.normal.iconColor = UIColor(red: 180.0/255.0, green: 180/255.0, blue: 180/255.0, alpha: 1.0)
-//        appearance.stackedLayoutAppearance.selected.iconColor = UIColor(red: 95.0/255.0, green: 122.0/255.0, blue: 150.0/255.0, alpha: 1.0)
+        appearance.stackedLayoutAppearance.normal.iconColor = UIColor(red: 180.0/255.0, green: 180/255.0,
+                                                                      blue: 180/255.0, alpha: 1.0)
         appearance.stackedLayoutAppearance.selected.iconColor = .black
-//        appearance.stackedLayoutAppearance.normal.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor(red: 180.0/255.0, green: 180/255.0, blue: 180/255.0, alpha: 1.0), NSAttributedString.Key.font : UIFont.systemFont(ofSize: 14.0, weight: .semibold)]
-//        appearance.stackedLayoutAppearance.selected.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor(red: 95.0/255.0, green: 122.0/255.0, blue: 150.0/255.0, alpha: 1.0), NSAttributedString.Key.font : UIFont.systemFont(ofSize: 14.0, weight: .semibold)]
-        
         item.standardAppearance = appearance
       }
     }
-    
     setupMiddleButton()
-    
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -58,7 +53,8 @@ class TabBarController: UITabBarController {
   
   // MARK: - Actions
   @objc private func menuButtonAction(sender: UIButton) {
-    
+    let vc = ScanViewController()
+    self.present(vc, animated: true, completion: nil)
   }
 }
 
