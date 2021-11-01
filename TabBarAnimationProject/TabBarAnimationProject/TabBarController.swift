@@ -11,20 +11,18 @@ import RAMAnimatedTabBarController
 
 class TabBarController: UITabBarController {
   
+  struct Defaults {
+    struct View {
+      static let shadowRadius: CGFloat = 2.0
+      static let shadowOpacity: Float = 0.5
+      static let shadowOffset: CGSize = CGSize(width: 0, height: 5)
+    }
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    if let items = self.tabBar.items {
-      for (index, item) in items.enumerated() {
-        item.image = self.getImage(by: index)
-//        item.value(forKeyPath: "titlePositionAdjustment")
-        let appearance = UITabBarAppearance()
-        appearance.stackedLayoutAppearance.normal.iconColor = UIColor(red: 180.0/255.0, green: 180/255.0,
-                                                                      blue: 180/255.0, alpha: 1.0)
-        appearance.stackedLayoutAppearance.selected.iconColor = .black
-        item.standardAppearance = appearance
-      }
-    }
+    setupBarItems()
     setupMiddleButton()
   }
   
@@ -40,15 +38,27 @@ class TabBarController: UITabBarController {
     menuButtonFrame.origin.y = view.bounds.height - menuButtonFrame.height - 40
     menuButtonFrame.origin.x = view.bounds.width/2 - menuButtonFrame.size.width/2
     menuButton.frame = menuButtonFrame
-    
-    menuButton.backgroundColor = UIColor(red: 250/255, green: 145/255, blue: 45/255, alpha: 1)
+    menuButton.backgroundColor = Colors.orangeColor
     menuButton.setImage(UIImage(named: "focus")?.withTintColor(.white), for: .normal)
     menuButton.layer.cornerRadius = menuButtonFrame.height/2
+    menuButton.applyStyle()
     view.addSubview(menuButton)
-    
     menuButton.addTarget(self, action: #selector(menuButtonAction(sender:)), for: .touchUpInside)
-    
     view.layoutIfNeeded()
+  }
+  
+  func setupBarItems() {
+    if let items = self.tabBar.items {
+      for (index, item) in items.enumerated() {
+        item.image = self.getImage(by: index)
+//        item.value(forKeyPath: "titlePositionAdjustment")
+        let appearance = UITabBarAppearance()
+        appearance.stackedLayoutAppearance.normal.iconColor = Colors.greyColor
+        appearance.stackedLayoutAppearance.selected.iconColor = .black
+        item.standardAppearance = appearance
+      }
+    }
+    
   }
   
   // MARK: - Actions
@@ -68,6 +78,17 @@ extension TabBarController {
     default:
       return nil
     }
+  }
+}
+
+private extension UIButton {
+  func applyStyle() {
+    clipsToBounds = true
+    layer.shadowColor = Colors.orangeColor.cgColor
+    layer.shadowOffset = TabBarController.Defaults.View.shadowOffset
+    layer.masksToBounds = false
+    layer.shadowRadius = TabBarController.Defaults.View.shadowRadius
+    layer.shadowOpacity = TabBarController.Defaults.View.shadowOpacity
   }
 }
 

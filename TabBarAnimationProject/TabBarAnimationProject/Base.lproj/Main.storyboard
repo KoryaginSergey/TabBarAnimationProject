@@ -56,10 +56,9 @@
         <scene sceneID="SpT-xW-2sg">
             <objects>
                 <tabBarController id="W40-UZ-LoS" customClass="TabBarController" customModule="TabBarAnimationProject" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="M7F-Kw-jAw">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="M7F-Kw-jAw" customClass="AppTabBar" customModule="TabBarAnimationProject" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" systemColor="systemYellowColor"/>
                     </tabBar>
                     <connections>
                         <segue destination="agl-r5-XuO" kind="relationship" relationship="viewControllers" id="7m8-jn-ONB"/>
@@ -71,14 +70,16 @@
             <point key="canvasLocation" x="-1739" y="213"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="M7F-Kw-jAw">
+            <size key="intrinsicContentSize" width="-1" height="83"/>
+        </designable>
+    </designables>
     <resources>
         <image name="imageBlack" width="25" height="25"/>
         <image name="mailBlack" width="25" height="25"/>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
