@@ -7,17 +7,13 @@
 
 import UIKit
 import RiveRuntime
+import RAMAnimatedTabBarController
 
 
 class PhotoViewController: UIViewController {
-  
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
   }
-  
-  
-  
 }
-

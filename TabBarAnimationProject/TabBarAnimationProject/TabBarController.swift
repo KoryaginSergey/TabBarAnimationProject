@@ -9,7 +9,7 @@ import UIKit
 import RAMAnimatedTabBarController
 
 
-class TabBarController: UITabBarController {
+class TabBarController: RAMAnimatedTabBarController {
   
   struct Defaults {
     struct View {
@@ -21,15 +21,13 @@ class TabBarController: UITabBarController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-    setupBarItems()
+//    setupBarItems()
     setupMiddleButton()
   }
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     self.tabBar.backgroundColor = UIColor.white
-    
   }
   
   func setupMiddleButton() {
@@ -47,37 +45,10 @@ class TabBarController: UITabBarController {
     view.layoutIfNeeded()
   }
   
-  func setupBarItems() {
-    if let items = self.tabBar.items {
-      for (index, item) in items.enumerated() {
-        item.image = self.getImage(by: index)
-//        item.value(forKeyPath: "titlePositionAdjustment")
-        let appearance = UITabBarAppearance()
-        appearance.stackedLayoutAppearance.normal.iconColor = Colors.greyColor
-        appearance.stackedLayoutAppearance.selected.iconColor = .black
-        item.standardAppearance = appearance
-      }
-    }
-    
-  }
-  
   // MARK: - Actions
   @objc private func menuButtonAction(sender: UIButton) {
     let vc = ScanViewController()
     self.present(vc, animated: true, completion: nil)
-  }
-}
-
-extension TabBarController {
-  func getImage(by index: Int) -> UIImage? {
-    switch index {
-    case 0:
-      return Icons.imageBlackIcon
-    case 1:
-      return Icons.mailBlackIcon
-    default:
-      return nil
-    }
   }
 }
 

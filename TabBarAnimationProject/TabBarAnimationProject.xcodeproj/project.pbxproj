@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		6334B37F272ACA9E00AD3570 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6334B37E272ACA9E00AD3570 /* AppDelegate.swift */; };
 		6334B381272ACA9E00AD3570 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6334B380272ACA9E00AD3570 /* SceneDelegate.swift */; };
-		6334B383272ACA9E00AD3570 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6334B382272ACA9E00AD3570 /* ViewController.swift */; };
 		6334B386272ACA9E00AD3570 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6334B384272ACA9E00AD3570 /* Main.storyboard */; };
 		6334B388272ACA9F00AD3570 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6334B387272ACA9F00AD3570 /* Assets.xcassets */; };
 		6334B38B272ACA9F00AD3570 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6334B389272ACA9F00AD3570 /* LaunchScreen.storyboard */; };
@@ -18,7 +17,6 @@
 		84716984272EF4C900EDB9D8 /* MailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84716983272EF4C900EDB9D8 /* MailViewController.swift */; };
 		8471698C272FDFC800EDB9D8 /* AppTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8471698B272FDFC700EDB9D8 /* AppTabBar.swift */; };
 		8471699327300E9900EDB9D8 /* RAMBounceAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8471699227300E9800EDB9D8 /* RAMBounceAnimation.swift */; };
-		84716996273012FA00EDB9D8 /* RAMRotationAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84716995273012FA00EDB9D8 /* RAMRotationAnimation.swift */; };
 		8471699A2730267E00EDB9D8 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847169982730267E00EDB9D8 /* ScanViewController.swift */; };
 		8471699B2730267E00EDB9D8 /* ScanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 847169992730267E00EDB9D8 /* ScanViewController.xib */; };
 		8471699E27302E8100EDB9D8 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8471699D27302E8000EDB9D8 /* Resources.swift */; };
@@ -29,7 +27,6 @@
 		6334B37B272ACA9E00AD3570 /* TabBarAnimationProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabBarAnimationProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6334B37E272ACA9E00AD3570 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6334B380272ACA9E00AD3570 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6334B382272ACA9E00AD3570 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6334B385272ACA9E00AD3570 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6334B387272ACA9F00AD3570 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6334B38A272ACA9F00AD3570 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -40,11 +37,9 @@
 		84716983272EF4C900EDB9D8 /* MailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailViewController.swift; sourceTree = "<group>"; };
 		8471698B272FDFC700EDB9D8 /* AppTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabBar.swift; sourceTree = "<group>"; };
 		8471699227300E9800EDB9D8 /* RAMBounceAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RAMBounceAnimation.swift; sourceTree = "<group>"; };
-		84716995273012FA00EDB9D8 /* RAMRotationAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RAMRotationAnimation.swift; sourceTree = "<group>"; };
 		847169982730267E00EDB9D8 /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
 		847169992730267E00EDB9D8 /* ScanViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScanViewController.xib; sourceTree = "<group>"; };
 		8471699D27302E8000EDB9D8 /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
-		847169A0273078AA00EDB9D8 /* animated-icon.riv */ = {isa = PBXFileReference; lastKnownFileType = file; name = "animated-icon.riv"; path = "../../../../../../Desktop/animated-icon.riv"; sourceTree = "<group>"; };
 		85AF4CD9825B4D2094D9142E /* Pods-TabBarAnimationProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabBarAnimationProject.release.xcconfig"; path = "Target Support Files/Pods-TabBarAnimationProject/Pods-TabBarAnimationProject.release.xcconfig"; sourceTree = "<group>"; };
 		D2B04A7CBD833DDED8B0B034 /* Pods-TabBarAnimationProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabBarAnimationProject.debug.xcconfig"; path = "Target Support Files/Pods-TabBarAnimationProject/Pods-TabBarAnimationProject.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,10 +77,8 @@
 		6334B37D272ACA9E00AD3570 /* TabBarAnimationProject */ = {
 			isa = PBXGroup;
 			children = (
-				847169A0273078AA00EDB9D8 /* animated-icon.riv */,
 				6334B37E272ACA9E00AD3570 /* AppDelegate.swift */,
 				6334B380272ACA9E00AD3570 /* SceneDelegate.swift */,
-				6334B382272ACA9E00AD3570 /* ViewController.swift */,
 				6334B384272ACA9E00AD3570 /* Main.storyboard */,
 				6334B387272ACA9F00AD3570 /* Assets.xcassets */,
 				6334B389272ACA9F00AD3570 /* LaunchScreen.storyboard */,
@@ -95,7 +88,6 @@
 				84716983272EF4C900EDB9D8 /* MailViewController.swift */,
 				8471698B272FDFC700EDB9D8 /* AppTabBar.swift */,
 				8471699227300E9800EDB9D8 /* RAMBounceAnimation.swift */,
-				84716995273012FA00EDB9D8 /* RAMRotationAnimation.swift */,
 				847169982730267E00EDB9D8 /* ScanViewController.swift */,
 				847169992730267E00EDB9D8 /* ScanViewController.xib */,
 				8471699D27302E8000EDB9D8 /* Resources.swift */,
@@ -236,7 +228,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8471698C272FDFC800EDB9D8 /* AppTabBar.swift in Sources */,
-				6334B383272ACA9E00AD3570 /* ViewController.swift in Sources */,
 				8471697E272EEC5600EDB9D8 /* TabBarController.swift in Sources */,
 				6334B37F272ACA9E00AD3570 /* AppDelegate.swift in Sources */,
 				6334B381272ACA9E00AD3570 /* SceneDelegate.swift in Sources */,
@@ -245,7 +236,6 @@
 				8471699A2730267E00EDB9D8 /* ScanViewController.swift in Sources */,
 				8471699E27302E8100EDB9D8 /* Resources.swift in Sources */,
 				8471699327300E9900EDB9D8 /* RAMBounceAnimation.swift in Sources */,
-				84716996273012FA00EDB9D8 /* RAMRotationAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

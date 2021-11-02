@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Mail View Controller-->
+        <!--MAIL-->
         <scene sceneID="ate-yl-knb">
             <objects>
                 <viewController restorationIdentifier="MailViewController" storyboardIdentifier="MailViewController" id="kPb-y1-yxl" customClass="MailViewController" customModule="TabBarAnimationProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,19 +18,23 @@
                         <viewLayoutGuide key="safeArea" id="2rg-FS-NEl"/>
                         <color key="backgroundColor" red="0.1854929066340528" green="0.19701120847786782" blue="0.23121761658031093" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="mailBlack" id="6xl-5S-d2J">
+                    <tabBarItem key="tabBarItem" title="MAIL" image="mailBlack" id="6xl-5S-d2J" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="size" keyPath="titlePositionAdjustment">
                                 <size key="value" width="20" height="0.0"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outlet property="animation" destination="r8a-Xr-mta" id="R5U-0m-QZC"/>
+                        </connections>
                     </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HsS-G8-ccX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="r8a-Xr-mta" customClass="RAMBounceAnimation" customModule="TabBarAnimationProject" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="-743" y="663"/>
+            <point key="canvasLocation" x="-743" y="465"/>
         </scene>
-        <!--Photo View Controller-->
+        <!--PHOTO-->
         <scene sceneID="8me-B1-TJi">
             <objects>
                 <viewController restorationIdentifier="PhotoViewController" storyboardIdentifier="PhotoViewController" id="agl-r5-XuO" customClass="PhotoViewController" customModule="TabBarAnimationProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -40,15 +44,19 @@
                         <viewLayoutGuide key="safeArea" id="k7A-CJ-dcs"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="imageBlack" id="w44-T2-CVh">
+                    <tabBarItem key="tabBarItem" title="PHOTO" image="imageBlack" id="w44-T2-CVh" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="size" keyPath="titlePositionAdjustment">
                                 <size key="value" width="-20" height="0.0"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outlet property="animation" destination="hha-xr-7yH" id="KLU-5x-3bt"/>
+                        </connections>
                     </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="STE-pQ-tMZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="hha-xr-7yH" customClass="RAMBounceAnimation" customModule="TabBarAnimationProject" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="-743" y="-249"/>
         </scene>
