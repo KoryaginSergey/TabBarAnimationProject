@@ -72,9 +72,9 @@ extension TabBarController {
   func getImage(by index: Int) -> UIImage? {
     switch index {
     case 0:
-      return UIImage(named: "imageBlack")
+      return Icons.imageBlackIcon
     case 1:
-      return UIImage(named: "mailBlack")
+      return Icons.mailBlackIcon
     default:
       return nil
     }

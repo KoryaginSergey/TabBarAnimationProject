@@ -15,6 +15,6 @@ struct Colors {
 }
 
 struct Icons {
-  
-  
+  static let mailBlackIcon = UIImage(named: "mailBlack")
+  static let imageBlackIcon = UIImage(named: "imageBlack")
 }

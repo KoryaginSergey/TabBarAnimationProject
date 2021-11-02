@@ -44,6 +44,7 @@
 		847169982730267E00EDB9D8 /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
 		847169992730267E00EDB9D8 /* ScanViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScanViewController.xib; sourceTree = "<group>"; };
 		8471699D27302E8000EDB9D8 /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
+		847169A0273078AA00EDB9D8 /* animated-icon.riv */ = {isa = PBXFileReference; lastKnownFileType = file; name = "animated-icon.riv"; path = "../../../../../../Desktop/animated-icon.riv"; sourceTree = "<group>"; };
 		85AF4CD9825B4D2094D9142E /* Pods-TabBarAnimationProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabBarAnimationProject.release.xcconfig"; path = "Target Support Files/Pods-TabBarAnimationProject/Pods-TabBarAnimationProject.release.xcconfig"; sourceTree = "<group>"; };
 		D2B04A7CBD833DDED8B0B034 /* Pods-TabBarAnimationProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabBarAnimationProject.debug.xcconfig"; path = "Target Support Files/Pods-TabBarAnimationProject/Pods-TabBarAnimationProject.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,6 +82,7 @@
 		6334B37D272ACA9E00AD3570 /* TabBarAnimationProject */ = {
 			isa = PBXGroup;
 			children = (
+				847169A0273078AA00EDB9D8 /* animated-icon.riv */,
 				6334B37E272ACA9E00AD3570 /* AppDelegate.swift */,
 				6334B380272ACA9E00AD3570 /* SceneDelegate.swift */,
 				6334B382272ACA9E00AD3570 /* ViewController.swift */,
