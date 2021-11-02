@@ -21,7 +21,6 @@ class TabBarController: RAMAnimatedTabBarController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-//    setupBarItems()
     setupMiddleButton()
   }
   

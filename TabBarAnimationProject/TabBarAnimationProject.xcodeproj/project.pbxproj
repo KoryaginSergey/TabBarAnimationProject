@@ -20,6 +20,9 @@
 		8471699A2730267E00EDB9D8 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847169982730267E00EDB9D8 /* ScanViewController.swift */; };
 		8471699B2730267E00EDB9D8 /* ScanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 847169992730267E00EDB9D8 /* ScanViewController.xib */; };
 		8471699E27302E8100EDB9D8 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8471699D27302E8000EDB9D8 /* Resources.swift */; };
+		847169A927318A8F00EDB9D8 /* CustomItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847169A827318A8F00EDB9D8 /* CustomItem.swift */; };
+		847169AC27318AAA00EDB9D8 /* CustomItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 847169AB27318AAA00EDB9D8 /* CustomItem.xib */; };
+		847169B02731948700EDB9D8 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847169AF2731948700EDB9D8 /* UIView+Extensions.swift */; };
 		A6EF33A7D8DFC1E9228C8275 /* Pods_TabBarAnimationProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73C6F38ECB76E02912F80891 /* Pods_TabBarAnimationProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +43,9 @@
 		847169982730267E00EDB9D8 /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
 		847169992730267E00EDB9D8 /* ScanViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScanViewController.xib; sourceTree = "<group>"; };
 		8471699D27302E8000EDB9D8 /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
+		847169A827318A8F00EDB9D8 /* CustomItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomItem.swift; sourceTree = "<group>"; };
+		847169AB27318AAA00EDB9D8 /* CustomItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomItem.xib; sourceTree = "<group>"; };
+		847169AF2731948700EDB9D8 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		85AF4CD9825B4D2094D9142E /* Pods-TabBarAnimationProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabBarAnimationProject.release.xcconfig"; path = "Target Support Files/Pods-TabBarAnimationProject/Pods-TabBarAnimationProject.release.xcconfig"; sourceTree = "<group>"; };
 		D2B04A7CBD833DDED8B0B034 /* Pods-TabBarAnimationProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabBarAnimationProject.debug.xcconfig"; path = "Target Support Files/Pods-TabBarAnimationProject/Pods-TabBarAnimationProject.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,6 +83,9 @@
 		6334B37D272ACA9E00AD3570 /* TabBarAnimationProject */ = {
 			isa = PBXGroup;
 			children = (
+				847169AE2731946400EDB9D8 /* Extensions */,
+				847169A62731897100EDB9D8 /* ViewControllers */,
+				847169A727318A3A00EDB9D8 /* Views */,
 				6334B37E272ACA9E00AD3570 /* AppDelegate.swift */,
 				6334B380272ACA9E00AD3570 /* SceneDelegate.swift */,
 				6334B384272ACA9E00AD3570 /* Main.storyboard */,
@@ -84,12 +93,8 @@
 				6334B389272ACA9F00AD3570 /* LaunchScreen.storyboard */,
 				6334B38C272ACA9F00AD3570 /* Info.plist */,
 				8471697D272EEC5500EDB9D8 /* TabBarController.swift */,
-				84716980272EF4A700EDB9D8 /* PhotoViewController.swift */,
-				84716983272EF4C900EDB9D8 /* MailViewController.swift */,
 				8471698B272FDFC700EDB9D8 /* AppTabBar.swift */,
 				8471699227300E9800EDB9D8 /* RAMBounceAnimation.swift */,
-				847169982730267E00EDB9D8 /* ScanViewController.swift */,
-				847169992730267E00EDB9D8 /* ScanViewController.xib */,
 				8471699D27302E8000EDB9D8 /* Resources.swift */,
 			);
 			path = TabBarAnimationProject;
@@ -101,6 +106,34 @@
 				73C6F38ECB76E02912F80891 /* Pods_TabBarAnimationProject.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		847169A62731897100EDB9D8 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				84716980272EF4A700EDB9D8 /* PhotoViewController.swift */,
+				84716983272EF4C900EDB9D8 /* MailViewController.swift */,
+				847169982730267E00EDB9D8 /* ScanViewController.swift */,
+				847169992730267E00EDB9D8 /* ScanViewController.xib */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		847169A727318A3A00EDB9D8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				847169A827318A8F00EDB9D8 /* CustomItem.swift */,
+				847169AB27318AAA00EDB9D8 /* CustomItem.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		847169AE2731946400EDB9D8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				847169AF2731948700EDB9D8 /* UIView+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		E96B0A04505A795AB6A0BA03 /* Pods */ = {
@@ -175,6 +208,7 @@
 				6334B388272ACA9F00AD3570 /* Assets.xcassets in Resources */,
 				6334B386272ACA9E00AD3570 /* Main.storyboard in Resources */,
 				8471699B2730267E00EDB9D8 /* ScanViewController.xib in Resources */,
+				847169AC27318AAA00EDB9D8 /* CustomItem.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +270,8 @@
 				8471699A2730267E00EDB9D8 /* ScanViewController.swift in Sources */,
 				8471699E27302E8100EDB9D8 /* Resources.swift in Sources */,
 				8471699327300E9900EDB9D8 /* RAMBounceAnimation.swift in Sources */,
+				847169A927318A8F00EDB9D8 /* CustomItem.swift in Sources */,
+				847169B02731948700EDB9D8 /* UIView+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
