@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,8 @@
 		6334B386272ACA9E00AD3570 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6334B384272ACA9E00AD3570 /* Main.storyboard */; };
 		6334B388272ACA9F00AD3570 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6334B387272ACA9F00AD3570 /* Assets.xcassets */; };
 		6334B38B272ACA9F00AD3570 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6334B389272ACA9F00AD3570 /* LaunchScreen.storyboard */; };
+		633C485F27329C880044AECB /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 633C485E27329C880044AECB /* Kingfisher */; };
+		633C48662732A9BA0044AECB /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633C48652732A9BA0044AECB /* CustomTabBarController.swift */; };
 		8471697E272EEC5600EDB9D8 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8471697D272EEC5500EDB9D8 /* TabBarController.swift */; };
 		84716981272EF4A800EDB9D8 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84716980272EF4A700EDB9D8 /* PhotoViewController.swift */; };
 		84716984272EF4C900EDB9D8 /* MailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84716983272EF4C900EDB9D8 /* MailViewController.swift */; };
@@ -34,6 +36,7 @@
 		6334B387272ACA9F00AD3570 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6334B38A272ACA9F00AD3570 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6334B38C272ACA9F00AD3570 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		633C48652732A9BA0044AECB /* CustomTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		73C6F38ECB76E02912F80891 /* Pods_TabBarAnimationProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TabBarAnimationProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8471697D272EEC5500EDB9D8 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		84716980272EF4A700EDB9D8 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				633C485F27329C880044AECB /* Kingfisher in Frameworks */,
 				A6EF33A7D8DFC1E9228C8275 /* Pods_TabBarAnimationProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -83,21 +87,30 @@
 		6334B37D272ACA9E00AD3570 /* TabBarAnimationProject */ = {
 			isa = PBXGroup;
 			children = (
+				6334B37E272ACA9E00AD3570 /* AppDelegate.swift */,
+				6334B380272ACA9E00AD3570 /* SceneDelegate.swift */,
+				633C48692732E5100044AECB /* TabBar */,
 				847169AE2731946400EDB9D8 /* Extensions */,
 				847169A62731897100EDB9D8 /* ViewControllers */,
 				847169A727318A3A00EDB9D8 /* Views */,
-				6334B37E272ACA9E00AD3570 /* AppDelegate.swift */,
-				6334B380272ACA9E00AD3570 /* SceneDelegate.swift */,
+				633C48652732A9BA0044AECB /* CustomTabBarController.swift */,
 				6334B384272ACA9E00AD3570 /* Main.storyboard */,
+				8471699D27302E8000EDB9D8 /* Resources.swift */,
 				6334B387272ACA9F00AD3570 /* Assets.xcassets */,
 				6334B389272ACA9F00AD3570 /* LaunchScreen.storyboard */,
 				6334B38C272ACA9F00AD3570 /* Info.plist */,
+			);
+			path = TabBarAnimationProject;
+			sourceTree = "<group>";
+		};
+		633C48692732E5100044AECB /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
 				8471697D272EEC5500EDB9D8 /* TabBarController.swift */,
 				8471698B272FDFC700EDB9D8 /* AppTabBar.swift */,
 				8471699227300E9800EDB9D8 /* RAMBounceAnimation.swift */,
-				8471699D27302E8000EDB9D8 /* Resources.swift */,
 			);
-			path = TabBarAnimationProject;
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 		6C5BBA9E149AC219A01FB635 /* Frameworks */ = {
@@ -163,6 +176,9 @@
 			dependencies = (
 			);
 			name = TabBarAnimationProject;
+			packageProductDependencies = (
+				633C485E27329C880044AECB /* Kingfisher */,
+			);
 			productName = TabBarAnimationProject;
 			productReference = 6334B37B272ACA9E00AD3570 /* TabBarAnimationProject.app */;
 			productType = "com.apple.product-type.application";
@@ -190,6 +206,9 @@
 				Base,
 			);
 			mainGroup = 6334B372272ACA9D00AD3570;
+			packageReferences = (
+				633C485D27329C880044AECB /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 6334B37C272ACA9E00AD3570 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -263,6 +282,7 @@
 			files = (
 				8471698C272FDFC800EDB9D8 /* AppTabBar.swift in Sources */,
 				8471697E272EEC5600EDB9D8 /* TabBarController.swift in Sources */,
+				633C48662732A9BA0044AECB /* CustomTabBarController.swift in Sources */,
 				6334B37F272ACA9E00AD3570 /* AppDelegate.swift in Sources */,
 				6334B381272ACA9E00AD3570 /* SceneDelegate.swift in Sources */,
 				84716981272EF4A800EDB9D8 /* PhotoViewController.swift in Sources */,
@@ -473,6 +493,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		633C485D27329C880044AECB /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.3.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		633C485E27329C880044AECB /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 633C485D27329C880044AECB /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6334B373272ACA9D00AD3570 /* Project object */;
 }

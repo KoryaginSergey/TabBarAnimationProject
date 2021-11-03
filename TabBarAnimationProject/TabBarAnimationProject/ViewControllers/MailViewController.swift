@@ -15,7 +15,7 @@ class MailViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    // Customize your comet
+    // Customise your comet
     let width = view.bounds.width
     let height = view.bounds.height
     let comets = [Comet(startPoint: CGPoint(x: 100, y: 0),

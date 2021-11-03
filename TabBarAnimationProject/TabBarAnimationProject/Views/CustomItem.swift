@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 
 final class CustomItem: UIView {
@@ -46,7 +47,7 @@ final class CustomItem: UIView {
 private extension CustomItem {
   func setupUI() {
     viewForStackView.layer.cornerRadius = Defaults.View.viewCornerRadius
-    viewForStackView.backgroundColor = Colors.blueColorForBackground
+    viewForStackView.backgroundColor = Resources.Colors.blueColorForBackground
   }
   
   func configure() {
@@ -54,6 +55,13 @@ private extension CustomItem {
     titleLabel.text = state?.title
   }
 }
+
+//    let path = Bundle.main.url(forResource: "loading", withExtension: "gif")!
+//    let resource = LocalFileImageDataProvider(fileURL: path)
+//    imageView.kf.setImage(with: resource)
+
+
+
 
 //private extension UIView {
 //  func applyStyle() {

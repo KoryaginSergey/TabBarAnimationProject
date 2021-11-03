@@ -35,7 +35,7 @@ class TabBarController: RAMAnimatedTabBarController {
     menuButtonFrame.origin.y = view.bounds.height - menuButtonFrame.height - 40
     menuButtonFrame.origin.x = view.bounds.width/2 - menuButtonFrame.size.width/2
     menuButton.frame = menuButtonFrame
-    menuButton.backgroundColor = Colors.orangeColor
+    menuButton.backgroundColor = Resources.Colors.orangeColor
     menuButton.setImage(UIImage(named: "focus")?.withTintColor(.white), for: .normal)
     menuButton.layer.cornerRadius = menuButtonFrame.height/2
     menuButton.applyStyle()
@@ -46,15 +46,15 @@ class TabBarController: RAMAnimatedTabBarController {
   
   // MARK: - Actions
   @objc private func menuButtonAction(sender: UIButton) {
-    let vc = ScanViewController()
-    self.present(vc, animated: true, completion: nil)
+    let viewController = ScanViewController()
+    self.present(viewController, animated: true, completion: nil)
   }
 }
 
 private extension UIButton {
   func applyStyle() {
     clipsToBounds = true
-    layer.shadowColor = Colors.orangeColor.cgColor
+    layer.shadowColor = Resources.Colors.orangeColor.cgColor
     layer.shadowOffset = TabBarController.Defaults.View.shadowOffset
     layer.masksToBounds = false
     layer.shadowRadius = TabBarController.Defaults.View.shadowRadius
