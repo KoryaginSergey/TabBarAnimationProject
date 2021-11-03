@@ -17,16 +17,16 @@ class RAMBounceAnimation : RAMItemAnimation {
   }
   
   override func deselectAnimation(_ icon: UIImageView, textLabel: UILabel, defaultTextColor: UIColor, defaultIconColor: UIColor) {
-    textLabel.textColor = UIColor(red: 180.0/255.0, green: 180.0/255.0, blue: 180.0/255.0, alpha: 1.0)
-    icon.tintColor = UIColor(red: 180.0/255.0, green: 180.0/255.0, blue: 180.0/255.0, alpha: 1.0)
+    textLabel.textColor = Colors.greyColor
+    icon.tintColor = Colors.greyColor
   }
   
   override func deselectedState(_ icon: UIImageView, textLabel: UILabel) {
-    textLabel.textColor = UIColor(red: 180.0/255.0, green: 180.0/255.0, blue: 180.0/255.0, alpha: 1.0)
+    textLabel.textColor = Colors.greyColor
     if let iconImage = icon.image {
       let renderImage = iconImage.withRenderingMode(.alwaysTemplate)
       icon.image = renderImage
-      icon.tintColor = UIColor(red: 180.0/255.0, green: 180.0/255.0, blue: 180.0/255.0, alpha: 1.0)
+      icon.tintColor = Colors.greyColor
     }
   }
   
