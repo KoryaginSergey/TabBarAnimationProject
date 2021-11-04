@@ -9,22 +9,20 @@
 /* Begin PBXBuildFile section */
 		6334B37F272ACA9E00AD3570 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6334B37E272ACA9E00AD3570 /* AppDelegate.swift */; };
 		6334B381272ACA9E00AD3570 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6334B380272ACA9E00AD3570 /* SceneDelegate.swift */; };
-		6334B386272ACA9E00AD3570 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6334B384272ACA9E00AD3570 /* Main.storyboard */; };
 		6334B388272ACA9F00AD3570 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6334B387272ACA9F00AD3570 /* Assets.xcassets */; };
 		6334B38B272ACA9F00AD3570 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6334B389272ACA9F00AD3570 /* LaunchScreen.storyboard */; };
 		633C485F27329C880044AECB /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 633C485E27329C880044AECB /* Kingfisher */; };
-		633C48662732A9BA0044AECB /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633C48652732A9BA0044AECB /* CustomTabBarController.swift */; };
-		8471697E272EEC5600EDB9D8 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8471697D272EEC5500EDB9D8 /* TabBarController.swift */; };
-		84716981272EF4A800EDB9D8 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84716980272EF4A700EDB9D8 /* PhotoViewController.swift */; };
-		84716984272EF4C900EDB9D8 /* MailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84716983272EF4C900EDB9D8 /* MailViewController.swift */; };
-		8471698C272FDFC800EDB9D8 /* AppTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8471698B272FDFC700EDB9D8 /* AppTabBar.swift */; };
-		8471699327300E9900EDB9D8 /* RAMBounceAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8471699227300E9800EDB9D8 /* RAMBounceAnimation.swift */; };
-		8471699A2730267E00EDB9D8 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847169982730267E00EDB9D8 /* ScanViewController.swift */; };
-		8471699B2730267E00EDB9D8 /* ScanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 847169992730267E00EDB9D8 /* ScanViewController.xib */; };
 		8471699E27302E8100EDB9D8 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8471699D27302E8000EDB9D8 /* Resources.swift */; };
 		847169A927318A8F00EDB9D8 /* CustomItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847169A827318A8F00EDB9D8 /* CustomItem.swift */; };
 		847169AC27318AAA00EDB9D8 /* CustomItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 847169AB27318AAA00EDB9D8 /* CustomItem.xib */; };
 		847169B02731948700EDB9D8 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847169AF2731948700EDB9D8 /* UIView+Extensions.swift */; };
+		847169BA2733F72400EDB9D8 /* CustomBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847169B92733F72100EDB9D8 /* CustomBarView.swift */; };
+		847169BD2733F74200EDB9D8 /* CustomBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 847169BC2733F74200EDB9D8 /* CustomBarView.xib */; };
+		847169C22733FD1700EDB9D8 /* CustomBarBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847169C12733FD1700EDB9D8 /* CustomBarBuilder.swift */; };
+		847169C62733FD3F00EDB9D8 /* CustomBarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847169C52733FD3E00EDB9D8 /* CustomBarModel.swift */; };
+		847169C92733FD5700EDB9D8 /* CustomBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847169C82733FD5700EDB9D8 /* CustomBarViewController.swift */; };
+		847169D527341B5200EDB9D8 /* book.gif in Resources */ = {isa = PBXBuildFile; fileRef = 847169D427341B5200EDB9D8 /* book.gif */; };
+		847169DC27341DC800EDB9D8 /* home.gif in Resources */ = {isa = PBXBuildFile; fileRef = 847169DB27341DC800EDB9D8 /* home.gif */; };
 		A6EF33A7D8DFC1E9228C8275 /* Pods_TabBarAnimationProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73C6F38ECB76E02912F80891 /* Pods_TabBarAnimationProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,23 +30,21 @@
 		6334B37B272ACA9E00AD3570 /* TabBarAnimationProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabBarAnimationProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6334B37E272ACA9E00AD3570 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6334B380272ACA9E00AD3570 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6334B385272ACA9E00AD3570 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6334B387272ACA9F00AD3570 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6334B38A272ACA9F00AD3570 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6334B38C272ACA9F00AD3570 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		633C48652732A9BA0044AECB /* CustomTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		73C6F38ECB76E02912F80891 /* Pods_TabBarAnimationProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TabBarAnimationProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8471697D272EEC5500EDB9D8 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-		84716980272EF4A700EDB9D8 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
-		84716983272EF4C900EDB9D8 /* MailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailViewController.swift; sourceTree = "<group>"; };
-		8471698B272FDFC700EDB9D8 /* AppTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabBar.swift; sourceTree = "<group>"; };
-		8471699227300E9800EDB9D8 /* RAMBounceAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RAMBounceAnimation.swift; sourceTree = "<group>"; };
-		847169982730267E00EDB9D8 /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
-		847169992730267E00EDB9D8 /* ScanViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScanViewController.xib; sourceTree = "<group>"; };
 		8471699D27302E8000EDB9D8 /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
 		847169A827318A8F00EDB9D8 /* CustomItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomItem.swift; sourceTree = "<group>"; };
 		847169AB27318AAA00EDB9D8 /* CustomItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomItem.xib; sourceTree = "<group>"; };
 		847169AF2731948700EDB9D8 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		847169B92733F72100EDB9D8 /* CustomBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBarView.swift; sourceTree = "<group>"; };
+		847169BC2733F74200EDB9D8 /* CustomBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomBarView.xib; sourceTree = "<group>"; };
+		847169C12733FD1700EDB9D8 /* CustomBarBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBarBuilder.swift; sourceTree = "<group>"; };
+		847169C52733FD3E00EDB9D8 /* CustomBarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBarModel.swift; sourceTree = "<group>"; };
+		847169C82733FD5700EDB9D8 /* CustomBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBarViewController.swift; sourceTree = "<group>"; };
+		847169D427341B5200EDB9D8 /* book.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = book.gif; sourceTree = "<group>"; };
+		847169DB27341DC800EDB9D8 /* home.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = home.gif; sourceTree = "<group>"; };
 		85AF4CD9825B4D2094D9142E /* Pods-TabBarAnimationProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabBarAnimationProject.release.xcconfig"; path = "Target Support Files/Pods-TabBarAnimationProject/Pods-TabBarAnimationProject.release.xcconfig"; sourceTree = "<group>"; };
 		D2B04A7CBD833DDED8B0B034 /* Pods-TabBarAnimationProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabBarAnimationProject.debug.xcconfig"; path = "Target Support Files/Pods-TabBarAnimationProject/Pods-TabBarAnimationProject.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,28 +85,16 @@
 			children = (
 				6334B37E272ACA9E00AD3570 /* AppDelegate.swift */,
 				6334B380272ACA9E00AD3570 /* SceneDelegate.swift */,
-				633C48692732E5100044AECB /* TabBar */,
 				847169AE2731946400EDB9D8 /* Extensions */,
-				847169A62731897100EDB9D8 /* ViewControllers */,
-				847169A727318A3A00EDB9D8 /* Views */,
-				633C48652732A9BA0044AECB /* CustomTabBarController.swift */,
-				6334B384272ACA9E00AD3570 /* Main.storyboard */,
+				847169C02733FCC900EDB9D8 /* CustomBar */,
 				8471699D27302E8000EDB9D8 /* Resources.swift */,
 				6334B387272ACA9F00AD3570 /* Assets.xcassets */,
 				6334B389272ACA9F00AD3570 /* LaunchScreen.storyboard */,
 				6334B38C272ACA9F00AD3570 /* Info.plist */,
+				847169D427341B5200EDB9D8 /* book.gif */,
+				847169DB27341DC800EDB9D8 /* home.gif */,
 			);
 			path = TabBarAnimationProject;
-			sourceTree = "<group>";
-		};
-		633C48692732E5100044AECB /* TabBar */ = {
-			isa = PBXGroup;
-			children = (
-				8471697D272EEC5500EDB9D8 /* TabBarController.swift */,
-				8471698B272FDFC700EDB9D8 /* AppTabBar.swift */,
-				8471699227300E9800EDB9D8 /* RAMBounceAnimation.swift */,
-			);
-			path = TabBar;
 			sourceTree = "<group>";
 		};
 		6C5BBA9E149AC219A01FB635 /* Frameworks */ = {
@@ -121,20 +105,11 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		847169A62731897100EDB9D8 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				84716980272EF4A700EDB9D8 /* PhotoViewController.swift */,
-				84716983272EF4C900EDB9D8 /* MailViewController.swift */,
-				847169982730267E00EDB9D8 /* ScanViewController.swift */,
-				847169992730267E00EDB9D8 /* ScanViewController.xib */,
-			);
-			path = ViewControllers;
-			sourceTree = "<group>";
-		};
 		847169A727318A3A00EDB9D8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				847169B92733F72100EDB9D8 /* CustomBarView.swift */,
+				847169BC2733F74200EDB9D8 /* CustomBarView.xib */,
 				847169A827318A8F00EDB9D8 /* CustomItem.swift */,
 				847169AB27318AAA00EDB9D8 /* CustomItem.xib */,
 			);
@@ -147,6 +122,17 @@
 				847169AF2731948700EDB9D8 /* UIView+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		847169C02733FCC900EDB9D8 /* CustomBar */ = {
+			isa = PBXGroup;
+			children = (
+				847169C52733FD3E00EDB9D8 /* CustomBarModel.swift */,
+				847169C82733FD5700EDB9D8 /* CustomBarViewController.swift */,
+				847169C12733FD1700EDB9D8 /* CustomBarBuilder.swift */,
+				847169A727318A3A00EDB9D8 /* Views */,
+			);
+			path = CustomBar;
 			sourceTree = "<group>";
 		};
 		E96B0A04505A795AB6A0BA03 /* Pods */ = {
@@ -224,9 +210,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6334B38B272ACA9F00AD3570 /* LaunchScreen.storyboard in Resources */,
+				847169DC27341DC800EDB9D8 /* home.gif in Resources */,
 				6334B388272ACA9F00AD3570 /* Assets.xcassets in Resources */,
-				6334B386272ACA9E00AD3570 /* Main.storyboard in Resources */,
-				8471699B2730267E00EDB9D8 /* ScanViewController.xib in Resources */,
+				847169D527341B5200EDB9D8 /* book.gif in Resources */,
+				847169BD2733F74200EDB9D8 /* CustomBarView.xib in Resources */,
 				847169AC27318AAA00EDB9D8 /* CustomItem.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,32 +267,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8471698C272FDFC800EDB9D8 /* AppTabBar.swift in Sources */,
-				8471697E272EEC5600EDB9D8 /* TabBarController.swift in Sources */,
-				633C48662732A9BA0044AECB /* CustomTabBarController.swift in Sources */,
 				6334B37F272ACA9E00AD3570 /* AppDelegate.swift in Sources */,
+				847169C22733FD1700EDB9D8 /* CustomBarBuilder.swift in Sources */,
 				6334B381272ACA9E00AD3570 /* SceneDelegate.swift in Sources */,
-				84716981272EF4A800EDB9D8 /* PhotoViewController.swift in Sources */,
-				84716984272EF4C900EDB9D8 /* MailViewController.swift in Sources */,
-				8471699A2730267E00EDB9D8 /* ScanViewController.swift in Sources */,
+				847169C92733FD5700EDB9D8 /* CustomBarViewController.swift in Sources */,
+				847169BA2733F72400EDB9D8 /* CustomBarView.swift in Sources */,
 				8471699E27302E8100EDB9D8 /* Resources.swift in Sources */,
-				8471699327300E9900EDB9D8 /* RAMBounceAnimation.swift in Sources */,
 				847169A927318A8F00EDB9D8 /* CustomItem.swift in Sources */,
 				847169B02731948700EDB9D8 /* UIView+Extensions.swift in Sources */,
+				847169C62733FD3F00EDB9D8 /* CustomBarModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		6334B384272ACA9E00AD3570 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6334B385272ACA9E00AD3570 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		6334B389272ACA9F00AD3570 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
