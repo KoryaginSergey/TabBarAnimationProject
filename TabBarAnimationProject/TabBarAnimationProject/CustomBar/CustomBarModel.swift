@@ -24,7 +24,7 @@ protocol CustomBarModelProtocol: AnyObject {
 }
 
 // MARK: - CustomBarModel
-class CustomBarModel: CustomBarModelProtocol {
+final class CustomBarModel: CustomBarModelProtocol {
   var viewControllers: [UIViewController] = []
   
   // MARK: - CustomBarModel methods
@@ -32,7 +32,7 @@ class CustomBarModel: CustomBarModelProtocol {
   
   func createViewControllers() {
     let vc1 = UIViewController()
-    vc1.view.backgroundColor = .systemGray2
+    vc1.view.backgroundColor = .secondarySystemBackground
     let vc2 = UIViewController()
     vc2.view.backgroundColor = .systemGray5
     let vc3 = UIViewController()

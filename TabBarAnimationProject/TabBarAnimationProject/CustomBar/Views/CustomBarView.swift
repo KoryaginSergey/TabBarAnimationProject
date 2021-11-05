@@ -8,62 +8,62 @@
 import UIKit
 import Kingfisher
 
+
+// MARK: - CustomBarViewDelegate
+protocol CustomBarViewDelegate: AnyObject {
+  func viewMenuButtonAction(view: CustomBarViewProtocol)
+  func viewLeftAction(view: CustomBarViewProtocol)
+  func viewRightAction(view: CustomBarViewProtocol)
+}
+
+// MARK: - CustomBarViewProtocol
+protocol CustomBarViewProtocol: UIView {
+  var delegate: CustomBarViewDelegate? { get set }
+  var leftCustomBarItem: CustomItem? { get }
+  var rightCustomBarItem: CustomItem? { get }
+  var contentView: UIView! { get }
+}
+
+// MARK: - CustomBarView
+final class CustomBarView: UIView, CustomBarViewProtocol {
   
-  // MARK: - CustomBarViewDelegate
-  protocol CustomBarViewDelegate: AnyObject {
-    func viewMenuButtonAction(view: CustomBarViewProtocol)
-    func viewLeftAction(view: CustomBarViewProtocol)
-    func viewRightAction(view: CustomBarViewProtocol)
-  }
-
-  // MARK: - CustomBarViewProtocol
-  protocol CustomBarViewProtocol: UIView {
-    var delegate: CustomBarViewDelegate? { get set }
-    var leftCustomBarItem: CustomItem? { get }
-    var rightCustomBarItem: CustomItem? { get }
-    var contentView: UIView! { get }
-  }
-
-  // MARK: - CustomBarView
-class CustomBarView: UIView, CustomBarViewProtocol {
-    
-    struct Defaults {
-      struct View {
-        static let shadowRadius: CGFloat = 2.0
-        static let shadowOpacity: Float = 0.5
-        static let shadowOffset: CGSize = CGSize(width: 0, height: 5)
-      }
-    }
-    
-    @IBOutlet weak var leftView: UIView!
-    @IBOutlet weak var middleView: UIView!
-    @IBOutlet weak var rightView: UIView!
-    @IBOutlet internal weak var contentView: UIView!
-    @IBOutlet weak var tabBar: UIStackView!
-    internal var leftCustomBarItem: CustomItem?
-    internal var rightCustomBarItem: CustomItem?
-    
-    weak var delegate: CustomBarViewDelegate?
-    
-    // MARK: - Overrided methods
-    override func awakeFromNib() {
-      super.awakeFromNib()
-      setup()
-      setupMiddleButton()
-      menuButtonAction()
-    }
-    
-    func setupMiddleButton() {
-      let menuButton = UIButton(frame: CGRect(x: 0, y: -15, width: 65, height: 65))
-      menuButton.backgroundColor = Resources.Colors.orangeColor
-      menuButton.setImage(UIImage(named: Resources.Text.buttonImage)?.withTintColor(.white), for: .normal)
-      menuButton.layer.cornerRadius = menuButton.frame.height/2
-      menuButton.applyStyle()
-      middleView.addSubview(menuButton)
-      menuButton.addTarget(self, action: #selector(menuButtonAction), for: .touchUpInside)
-      self.layoutIfNeeded()
+  struct Defaults {
+    struct View {
+      static let shadowRadius: CGFloat = 2.0
+      static let shadowOpacity: Float = 0.5
+      static let shadowOffset: CGSize = CGSize(width: 0, height: 5)
     }
   }
+  
+  @IBOutlet weak private var leftView: UIView!
+  @IBOutlet weak private var middleView: UIView!
+  @IBOutlet weak private var rightView: UIView!
+  @IBOutlet internal weak var contentView: UIView!
+  @IBOutlet weak private var tabBar: UIStackView!
+  internal var leftCustomBarItem: CustomItem?
+  internal var rightCustomBarItem: CustomItem?
+  
+  weak var delegate: CustomBarViewDelegate?
+  
+  // MARK: - Overrided methods
+  override func awakeFromNib() {
+    super.awakeFromNib()
+    setup()
+    setupMiddleButton()
+    menuButtonAction()
+  }
+  
+  func setupMiddleButton() {
+    let menuButton = UIButton(frame: CGRect(x: 0, y: -15, width: 65, height: 65))
+    menuButton.backgroundColor = Resources.Colors.orangeColor
+    menuButton.setImage(UIImage(named: Resources.Text.buttonImage)?.withTintColor(.white), for: .normal)
+    menuButton.layer.cornerRadius = menuButton.frame.height/2
+    menuButton.applyStyle()
+    middleView.addSubview(menuButton)
+    menuButton.addTarget(self, action: #selector(menuButtonAction), for: .touchUpInside)
+    self.layoutIfNeeded()
+  }
+}
 
 // MARK: - Private extensions
 private extension CustomBarView {

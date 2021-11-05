@@ -9,6 +9,7 @@ import UIKit
 import Kingfisher
 
 
+// MARK: - CustomItem
 final class CustomItem: UIView {
   
   struct Defaults {
@@ -23,7 +24,6 @@ final class CustomItem: UIView {
     }
   }
   
-  @IBOutlet weak var stackView: UIStackView!
   @IBOutlet weak private var viewForStackView: UIView!
   @IBOutlet weak private var imageView: UIImageView!
   @IBOutlet weak private var titleLabel: UILabel!
@@ -54,6 +54,7 @@ final class CustomItem: UIView {
     isActive = false
   }
   
+  // MARK: - Overrided methods
   override func awakeFromNib() {
     super.awakeFromNib()
     setupUI()
