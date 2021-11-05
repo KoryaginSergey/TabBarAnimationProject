@@ -11,6 +11,7 @@ import UIKit
 // MARK: - CustomBarViewController
 final class CustomBarViewController: UIViewController {
   var model: CustomBarModelProtocol
+  private var viewControllers: [UIViewController] = []
   fileprivate var tempView: CustomBarViewProtocol?
   var customView: CustomBarViewProtocol! {
     return self.view as? CustomBarViewProtocol
@@ -21,9 +22,7 @@ final class CustomBarViewController: UIViewController {
     self.model = model
     self.tempView = view
     super.init(nibName: nil, bundle: nil)
-//    self.model.delegate = self
-//    customView.contentView.dataSource = self
-//    customView.contentView.delegate = self
+    self.model.delegate = self
   }
   
   required convenience init?(coder aDecoder: NSCoder) {
@@ -40,29 +39,43 @@ final class CustomBarViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     self.customView.delegate = self
-//    model.requestLocation()
-//    model.fetch()
+    model.createViewControllers()
+    viewMenuButtonAction(view: view as! CustomBarViewProtocol)
   }
 }
 
 // MARK: - CustomBarViewDelegate
 extension CustomBarViewController: CustomBarViewDelegate {
-//  func viewLikeAction(view: CustomBarViewProtocol) {
-//    if !model.isFetching {
-//      customView.contentView.swipeAction(direction: .right)
-//    }
-//  }
-//
-//  func viewDissLikeAction(view: CustomBarViewProtocol) {
-//    if !model.isFetching {
-//      customView.contentView.swipeAction(direction: .left)
-//    }
-//  }
+  func viewMenuButtonAction(view: CustomBarViewProtocol) {
+    let selectedController = model.choseMenuButtonAction(view: view)
+    addChildController(childController: selectedController)
+  }
+  
+  func viewLeftAction(view: CustomBarViewProtocol) {
+    view.leftCustomBarItem?.openItem()
+    view.rightCustomBarItem?.closeItem()
+    guard let selectedController = model.viewControllers.first else { return }
+    addChildController(childController: selectedController)
+  }
+  
+  func viewRightAction(view: CustomBarViewProtocol) {
+    view.rightCustomBarItem?.openItem()
+    view.leftCustomBarItem?.closeItem()
+    guard let selectedController = model.viewControllers.last else { return }
+    addChildController(childController: selectedController)
+  }
+  
+  func addChildController(childController: UIViewController) {
+    addChild(childController)
+    childController.view.frame = customView.contentView.bounds
+    customView.contentView.addSubview(childController.view)
+    childController.didMove(toParent: self)
+  }
 }
 
 // MARK: - CustomBarModelDelegate
 extension CustomBarViewController: CustomBarModelDelegate {
   func modelDidChanged(model: CustomBarModelProtocol) {
-//    customView.contentView.reloadData()
+
   }
 }

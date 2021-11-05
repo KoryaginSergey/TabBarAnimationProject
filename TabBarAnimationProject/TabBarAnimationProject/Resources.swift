@@ -22,4 +22,16 @@ struct Resources {
     static let mailBlackIcon = UIImage(named: "mailBlack")
     static let imageBlackIcon = UIImage(named: "imageBlack")
   }
+  
+  struct Text {
+    static let gifFormat = "gif"
+    static let leftTitle = "Kitaplar"
+    static let rightTitle = "Magaza"
+    static let bookImage = "bookClosed"
+    static let bookGif = "book"
+    static let homeImage = "homeStand"
+    static let homeGif = "home"
+    static let defaultString = ""
+    static let buttonImage = "focus"
+  }
 }

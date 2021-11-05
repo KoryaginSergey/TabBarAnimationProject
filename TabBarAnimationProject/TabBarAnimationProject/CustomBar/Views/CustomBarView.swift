@@ -10,26 +10,22 @@ import Kingfisher
 
   
   // MARK: - CustomBarViewDelegate
-  protocol CustomBarViewDelegate: class {
-    
-//    func viewContinueAction(view: CustomBarViewProtocol)
+  protocol CustomBarViewDelegate: AnyObject {
+    func viewMenuButtonAction(view: CustomBarViewProtocol)
+    func viewLeftAction(view: CustomBarViewProtocol)
+    func viewRightAction(view: CustomBarViewProtocol)
   }
 
   // MARK: - CustomBarViewProtocol
   protocol CustomBarViewProtocol: UIView {
-    
-//    func setState(_ state: CustomItem.State)
     var delegate: CustomBarViewDelegate? { get set }
+    var leftCustomBarItem: CustomItem? { get }
+    var rightCustomBarItem: CustomItem? { get }
+    var contentView: UIView! { get }
   }
 
   // MARK: - CustomBarView
-  class CustomBarView: UIView, CustomBarViewProtocol {
-    
-//    let inputMailView: TextInputFieldView = TextInputFieldView.create()
-    
-//    func setState(_ state: TextInputFieldView.State) {
-//      inputMailView.snapshot = state
-//    }
+class CustomBarView: UIView, CustomBarViewProtocol {
     
     struct Defaults {
       struct View {
@@ -42,51 +38,29 @@ import Kingfisher
     @IBOutlet weak var leftView: UIView!
     @IBOutlet weak var middleView: UIView!
     @IBOutlet weak var rightView: UIView!
-    @IBOutlet weak var contentView: UIView!
+    @IBOutlet internal weak var contentView: UIView!
     @IBOutlet weak var tabBar: UIStackView!
-    private var leftCustomBarItem: CustomItem?
-    private var rightCustomBarItem: CustomItem?
-    
-    private var viewControllers: [UIViewController] = []
+    internal var leftCustomBarItem: CustomItem?
+    internal var rightCustomBarItem: CustomItem?
     
     weak var delegate: CustomBarViewDelegate?
-    
     
     // MARK: - Overrided methods
     override func awakeFromNib() {
       super.awakeFromNib()
-      
-      let vc1 = UIViewController()
-      vc1.view.backgroundColor = .red
-      
-      let vc2 = UIViewController()
-      vc2.view.backgroundColor = .orange
-      
-      let vc3 = UIViewController()
-      vc3.view.backgroundColor = .green
-      
-      viewControllers = [vc1, vc2, vc3]
-      
       setup()
       setupMiddleButton()
       menuButtonAction()
-      
-//      setupUI()
-//      setValuesForgotPasswordView()
     }
-    
-//    @IBAction func continueButton(_ sender: Any) {
-//      self.delegate?.viewContinueAction(view: self)
-//    }
     
     func setupMiddleButton() {
       let menuButton = UIButton(frame: CGRect(x: 0, y: 0, width: 65, height: 65))
       var menuButtonFrame = menuButton.frame
-      menuButtonFrame.origin.y = self.bounds.height - menuButtonFrame.height - 120
+      menuButtonFrame.origin.y = self.bounds.height - menuButtonFrame.height - 90
       menuButtonFrame.origin.x = self.bounds.width/2 - menuButtonFrame.size.width/2
       menuButton.frame = menuButtonFrame
       menuButton.backgroundColor = Resources.Colors.orangeColor
-      menuButton.setImage(UIImage(named: "focus")?.withTintColor(.white), for: .normal)
+      menuButton.setImage(UIImage(named: Resources.Text.buttonImage)?.withTintColor(.white), for: .normal)
       menuButton.layer.cornerRadius = menuButtonFrame.height/2
       menuButton.applyStyle()
       self.addSubview(menuButton)
@@ -98,73 +72,45 @@ import Kingfisher
 // MARK: - Private extensions
 private extension CustomBarView {
   func setup() {
-    
     let leftCustomBarItem: CustomItem = CustomItem.create()
-    leftCustomBarItem.state = .init(title: "Kitaplar", imageAnimation: UIImage(named: "bookClosed")!)
+    leftCustomBarItem.state = .init(title: Resources.Text.leftTitle,
+                                    imageAnimation: UIImage(named: Resources.Text.bookImage)!,
+                                    pathGif: Resources.Text.bookGif)
     leftView.addSubview(leftCustomBarItem)
     leftCustomBarItem.translatesAutoresizingMaskIntoConstraints = false
-    NSLayoutConstraint.activate([
-      leftCustomBarItem.topAnchor.constraint(equalTo: leftView.topAnchor),
-      leftCustomBarItem.bottomAnchor.constraint(equalTo: leftView.bottomAnchor),
-      leftCustomBarItem.leftAnchor.constraint(equalTo: leftView.leftAnchor),
-      leftCustomBarItem.rightAnchor.constraint(equalTo: leftView.rightAnchor)
-    ])
+    leftCustomBarItem.layoutAttachAll(to: leftView)
     leftCustomBarItem.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(leftAction)))
+    leftView.clipsToBounds = true
     self.leftCustomBarItem = leftCustomBarItem
     
     let rightCustomBarItem: CustomItem = CustomItem.create()
-    rightCustomBarItem.state = .init(title: "Magaza", imageAnimation: UIImage(named: "homeStand")!)
+    rightCustomBarItem.state = .init(title: Resources.Text.rightTitle,
+                                     imageAnimation: UIImage(named: Resources.Text.homeImage)!,
+                                     pathGif: Resources.Text.homeGif)
     rightView.addSubview(rightCustomBarItem)
     rightCustomBarItem.translatesAutoresizingMaskIntoConstraints = false
-    NSLayoutConstraint.activate([
-      rightCustomBarItem.topAnchor.constraint(equalTo: rightView.topAnchor),
-      rightCustomBarItem.bottomAnchor.constraint(equalTo: rightView.bottomAnchor),
-      rightCustomBarItem.leftAnchor.constraint(equalTo: rightView.leftAnchor),
-      rightCustomBarItem.rightAnchor.constraint(equalTo: rightView.rightAnchor)
-    ])
+    rightCustomBarItem.layoutAttachAll(to: rightView)
     rightCustomBarItem.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(rightAction)))
+    rightView.clipsToBounds = true
     self.rightCustomBarItem = rightCustomBarItem
   }
 }
 
 //MARK: - Actions
 private extension CustomBarView {
-  
   @objc
   func menuButtonAction() {
-    self.leftCustomBarItem?.closeItem()
-    self.rightCustomBarItem?.closeItem()
-    let selectedController = viewControllers[1]
-    
-//    addChild(selectedController)
-//    selectedController.view.frame = contentView.bounds
-//    contentView.addSubview(selectedController.view)
-//    selectedController.didMove(toParent: self)
+    self.delegate?.viewMenuButtonAction(view: self)
   }
   
   @objc
   func leftAction() {
-    self.leftCustomBarItem?.openItem()
-    self.rightCustomBarItem?.closeItem()
-    guard let selectedController = viewControllers.first else { return }
-    
-//    addChild(selectedController)
-//    selectedController.view.frame = contentView.bounds
-//    contentView.addSubview(selectedController.view)
-//    selectedController.didMove(toParent: self)
+    self.delegate?.viewLeftAction(view: self)
   }
   
   @objc
   func rightAction() {
-    self.rightCustomBarItem?.openItem()
-    self.leftCustomBarItem?.closeItem()
-    
-    guard let selectedController = viewControllers.last else { return }
-    
-//    addChild(selectedController)
-//    selectedController.view.frame = contentView.bounds
-//    contentView.addSubview(selectedController.view)
-//    selectedController.didMove(toParent: self)
+    self.delegate?.viewRightAction(view: self)
   }
 }
 

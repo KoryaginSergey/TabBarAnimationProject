@@ -16,50 +16,33 @@ protocol CustomBarModelDelegate: AnyObject {
 // MARK: - CustomBarModelProtocol
 protocol CustomBarModelProtocol: AnyObject {
   var delegate: CustomBarModelDelegate? { get set }
-//  var modelUsers: [Result] { get }
-//  var isFetching: Bool { get }
-//  var location: CLLocation? { get }
-//  func fetch()
-//  func removeFirst()
-//  func requestLocation()
+  var viewControllers: [UIViewController] { get }
+  
+  func createViewControllers()
+  func choseMenuButtonAction(view: CustomBarViewProtocol) -> UIViewController
 }
 
 // MARK: - CustomBarModel
 class CustomBarModel: CustomBarModelProtocol {
-//  var modelUsers: [Result] = []
-//  let locationManager = LocationManager()
-//  var location: CLLocation?
-//  var page = Page(page: 0, results: 5)
-//  var isFetching: Bool = true
+  var viewControllers: [UIViewController] = []
   
   // MARK: - CustomBarModel methods
   weak var delegate: CustomBarModelDelegate?
   
+  func createViewControllers() {
+    let vc1 = UIViewController()
+    vc1.view.backgroundColor = .lightGray
+    let vc2 = UIViewController()
+    vc2.view.backgroundColor = .gray
+    let vc3 = UIViewController()
+    vc3.view.backgroundColor = .darkGray
+    viewControllers = [vc1, vc2, vc3]
+  }
   
-  
-  
-  
-//  func fetch() {
-//    page.page += 1
-//    isFetching = true
-//    PostServices.shared.fetchRequest(page: page) { [weak self] model in
-//      guard let self = self else { return }
-//      self.isFetching = false
-//      self.modelUsers.append(contentsOf: model.results ?? [])
-//      self.delegate?.modelDidChanged(model: self)
-//    }
-//  }
-  
-//  func removeFirst() {
-//    modelUsers.removeFirst()
-//  }
-  
-//  func requestLocation() {
-//    self.locationManager.currentLocationRequest { [weak self] location in
-//      guard let self = self else { return }
-//      self.location = location
-//      self.delegate?.modelDidChanged(model: self)
-//    }
-//  }
+  func choseMenuButtonAction(view: CustomBarViewProtocol) -> UIViewController {
+    view.leftCustomBarItem?.closeItem()
+    view.rightCustomBarItem?.closeItem()
+    let selectedController = viewControllers[1]
+    return selectedController
+  }
 }
-

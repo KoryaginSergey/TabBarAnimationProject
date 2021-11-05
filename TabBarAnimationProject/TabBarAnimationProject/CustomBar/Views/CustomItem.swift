@@ -13,7 +13,7 @@ final class CustomItem: UIView {
   
   struct Defaults {
     struct View {
-      static let viewCornerRadius: CGFloat = 14
+      static let viewCornerRadius: CGFloat = 20
     }
   }
   
@@ -31,10 +31,12 @@ final class CustomItem: UIView {
   public struct State {
     let title: String
     let imageAnimation: UIImage
+    let pathGif: String
     
-    init(title: String, imageAnimation: UIImage) {
+    init(title: String, imageAnimation: UIImage, pathGif: String) {
       self.title = title
       self.imageAnimation = imageAnimation
+      self.pathGif = pathGif
     }
   }
   
@@ -63,11 +65,12 @@ private extension CustomItem {
   func reloadTab(animated: Bool = false) {
     UIView.animate(withDuration: animated ? 0.25 : 0) { [weak self] in
       guard let self = self else { return }
-      self.titleLabel.text = self.isActive ? self.state?.title : ""
+      self.titleLabel.text = self.isActive ? self.state?.title : Resources.Text.defaultString
       self.viewForStackView.backgroundColor = self.isActive ? Resources.Colors.blueColorForBackground : .clear
       
       if self.isActive {
-        guard let path = Bundle.main.url(forResource: "book", withExtension: "gif") else { return }
+        guard let path = Bundle.main.url(forResource: self.state?.pathGif,
+                                         withExtension: Resources.Text.gifFormat) else { return }
         let resource = LocalFileImageDataProvider(fileURL: path)
         self.imageView.kf.setImage(with: resource)
       } else {
@@ -82,22 +85,6 @@ private extension CustomItem {
   }
   
   func configure() {
-    //    imageView.image = state?.imageAnimation
-    //    titleLabel.text = state?.title
     reloadTab()
   }
 }
-
-//    let path = Bundle.main.url(forResource: "loading", withExtension: "gif")!
-//    let resource = LocalFileImageDataProvider(fileURL: path)
-//    imageView.kf.setImage(with: resource)
-
-
-
-
-//private extension UIView {
-//  func applyStyle() {
-//    layer.cornerRadius = frame.size.width / 2
-//    clipsToBounds = true
-//  }
-//}
