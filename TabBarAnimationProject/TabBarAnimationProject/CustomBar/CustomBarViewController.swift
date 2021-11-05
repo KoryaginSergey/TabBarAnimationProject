@@ -52,16 +52,12 @@ extension CustomBarViewController: CustomBarViewDelegate {
   }
   
   func viewLeftAction(view: CustomBarViewProtocol) {
-    view.leftCustomBarItem?.openItem()
-    view.rightCustomBarItem?.closeItem()
-    guard let selectedController = model.viewControllers.first else { return }
+    let selectedController = model.choseViewLeftAction(view: view)
     addChildController(childController: selectedController)
   }
   
   func viewRightAction(view: CustomBarViewProtocol) {
-    view.rightCustomBarItem?.openItem()
-    view.leftCustomBarItem?.closeItem()
-    guard let selectedController = model.viewControllers.last else { return }
+    let selectedController = model.choseViewRightAction(view: view)
     addChildController(childController: selectedController)
   }
   

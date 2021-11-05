@@ -19,6 +19,8 @@ protocol CustomBarModelProtocol: AnyObject {
   var viewControllers: [UIViewController] { get }
   func createViewControllers()
   func choseMenuButtonAction(view: CustomBarViewProtocol) -> UIViewController
+  func choseViewLeftAction(view: CustomBarViewProtocol) -> UIViewController
+  func choseViewRightAction(view: CustomBarViewProtocol) -> UIViewController
 }
 
 // MARK: - CustomBarModel
@@ -42,6 +44,18 @@ class CustomBarModel: CustomBarModelProtocol {
     view.leftCustomBarItem?.closeItem()
     view.rightCustomBarItem?.closeItem()
     let selectedController = viewControllers[1]
+    return selectedController
+  }
+  func choseViewLeftAction(view: CustomBarViewProtocol) -> UIViewController {
+    view.leftCustomBarItem?.openItem()
+    view.rightCustomBarItem?.closeItem()
+    let selectedController = viewControllers[0]
+    return selectedController
+  }
+  func choseViewRightAction(view: CustomBarViewProtocol) -> UIViewController {
+    view.rightCustomBarItem?.openItem()
+    view.leftCustomBarItem?.closeItem()
+    let selectedController = viewControllers[2]
     return selectedController
   }
 }
