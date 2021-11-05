@@ -54,16 +54,12 @@ class CustomBarView: UIView, CustomBarViewProtocol {
     }
     
     func setupMiddleButton() {
-      let menuButton = UIButton(frame: CGRect(x: 0, y: 0, width: 65, height: 65))
-      var menuButtonFrame = menuButton.frame
-      menuButtonFrame.origin.y = self.bounds.height - menuButtonFrame.height - 90
-      menuButtonFrame.origin.x = self.bounds.width/2 - menuButtonFrame.size.width/2
-      menuButton.frame = menuButtonFrame
+      let menuButton = UIButton(frame: CGRect(x: 0, y: -15, width: 65, height: 65))
       menuButton.backgroundColor = Resources.Colors.orangeColor
       menuButton.setImage(UIImage(named: Resources.Text.buttonImage)?.withTintColor(.white), for: .normal)
-      menuButton.layer.cornerRadius = menuButtonFrame.height/2
+      menuButton.layer.cornerRadius = menuButton.frame.height/2
       menuButton.applyStyle()
-      self.addSubview(menuButton)
+      middleView.addSubview(menuButton)
       menuButton.addTarget(self, action: #selector(menuButtonAction), for: .touchUpInside)
       self.layoutIfNeeded()
     }
@@ -73,8 +69,9 @@ class CustomBarView: UIView, CustomBarViewProtocol {
 private extension CustomBarView {
   func setup() {
     let leftCustomBarItem: CustomItem = CustomItem.create()
+    guard let imageForLeftAnimation = UIImage(named: Resources.Text.bookImage) else { return }
     leftCustomBarItem.state = .init(title: Resources.Text.leftTitle,
-                                    imageAnimation: UIImage(named: Resources.Text.bookImage)!,
+                                    imageAnimation: imageForLeftAnimation,
                                     pathGif: Resources.Text.bookGif)
     leftView.addSubview(leftCustomBarItem)
     leftCustomBarItem.translatesAutoresizingMaskIntoConstraints = false
@@ -84,8 +81,9 @@ private extension CustomBarView {
     self.leftCustomBarItem = leftCustomBarItem
     
     let rightCustomBarItem: CustomItem = CustomItem.create()
+    guard let imageForRightAnimation = UIImage(named: Resources.Text.homeImage) else { return }
     rightCustomBarItem.state = .init(title: Resources.Text.rightTitle,
-                                     imageAnimation: UIImage(named: Resources.Text.homeImage)!,
+                                     imageAnimation: imageForRightAnimation,
                                      pathGif: Resources.Text.homeGif)
     rightView.addSubview(rightCustomBarItem)
     rightCustomBarItem.translatesAutoresizingMaskIntoConstraints = false

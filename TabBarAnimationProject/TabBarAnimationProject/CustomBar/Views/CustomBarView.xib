@@ -14,24 +14,30 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="04v-Jc-mPD">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="806"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hMF-H8-zBG">
                     <rect key="frame" x="0.0" y="806" width="414" height="90"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q60-Y4-17f">
-                            <rect key="frame" x="0.0" y="0.0" width="155.5" height="90"/>
+                            <rect key="frame" x="0.0" y="0.0" width="174.5" height="90"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eR4-BE-cMG">
-                            <rect key="frame" x="155.5" y="0.0" width="103.5" height="90"/>
+                            <rect key="frame" x="174.5" y="0.0" width="65" height="90"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="65" id="i2R-lV-u53"/>
+                            </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="smB-gN-aP1">
-                            <rect key="frame" x="259" y="0.0" width="155" height="90"/>
+                            <rect key="frame" x="239.5" y="0.0" width="174.5" height="90"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
                     </subviews>
                     <constraints>
-                        <constraint firstItem="Q60-Y4-17f" firstAttribute="width" secondItem="eR4-BE-cMG" secondAttribute="width" multiplier="1.5" id="1se-FB-rou"/>
                         <constraint firstItem="Q60-Y4-17f" firstAttribute="leading" secondItem="hMF-H8-zBG" secondAttribute="leading" id="2Wg-8r-XVs"/>
                         <constraint firstItem="Q60-Y4-17f" firstAttribute="width" secondItem="smB-gN-aP1" secondAttribute="width" id="FMZ-s5-umB"/>
                         <constraint firstAttribute="bottom" secondItem="Q60-Y4-17f" secondAttribute="bottom" id="Ibu-zh-ZMm"/>
@@ -39,10 +45,6 @@
                         <constraint firstItem="Q60-Y4-17f" firstAttribute="top" secondItem="hMF-H8-zBG" secondAttribute="top" id="XPp-x4-3Tv"/>
                     </constraints>
                 </stackView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="04v-Jc-mPD">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="806"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="2dA-yA-JuU"/>
             <color key="backgroundColor" systemColor="systemGray6Color"/>

@@ -17,7 +17,6 @@ protocol CustomBarModelDelegate: AnyObject {
 protocol CustomBarModelProtocol: AnyObject {
   var delegate: CustomBarModelDelegate? { get set }
   var viewControllers: [UIViewController] { get }
-  
   func createViewControllers()
   func choseMenuButtonAction(view: CustomBarViewProtocol) -> UIViewController
 }
@@ -31,11 +30,11 @@ class CustomBarModel: CustomBarModelProtocol {
   
   func createViewControllers() {
     let vc1 = UIViewController()
-    vc1.view.backgroundColor = .lightGray
+    vc1.view.backgroundColor = .systemGray2
     let vc2 = UIViewController()
-    vc2.view.backgroundColor = .gray
+    vc2.view.backgroundColor = .systemGray5
     let vc3 = UIViewController()
-    vc3.view.backgroundColor = .darkGray
+    vc3.view.backgroundColor = .systemGray4
     viewControllers = [vc1, vc2, vc3]
   }
   
